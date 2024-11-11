@@ -1,0 +1,33 @@
+[
+	{
+		"id": 1,
+		"title": "prueba",
+		"description": "newdesc",
+		"code": "code44",
+		"price": 45,
+		"status": true,
+		"stock": 50,
+		"category": "12d"
+	},
+	{
+		"id": 2,
+		"title": "prueba2",
+		"description": "desc2",
+		"code": "code22",
+		"price": 42,
+		"status": true,
+		"stock": 5,
+		"category": "12d"
+	},
+	{
+		"id": 4,
+		"title": "prueba6",
+		"description": "desc6",
+		"code": "code22",
+		"price": 42,
+		"status": true,
+		"stock": 56,
+		"category": "12d",
+		"thumbnail": "file_6092_1111242024_023434.png"
+	}
+]
