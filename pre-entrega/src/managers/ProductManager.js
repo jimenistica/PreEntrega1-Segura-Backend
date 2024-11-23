@@ -15,8 +15,10 @@ export default class ProductManager{
     async $findOneById(id){
         this.#products = await this.getAll();
         const productFound= this.#products.find((item)=> item.id === Number(id));
+        console.log("Producto encontrado:", productFound);
 
         if (!productFound) {
+            console.log("Producto NO encontrado:");
             throw new ErrorManager("Id no encontrado", 404);
         }
         return productFound;
