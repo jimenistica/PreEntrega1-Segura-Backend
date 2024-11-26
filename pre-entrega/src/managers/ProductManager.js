@@ -43,11 +43,9 @@ export default class ProductManager{
 
     async insertOne(data, file){
         try {
-            console.log("File recibido:", file);
-            console.log("Data recibida:", data);
             const { title, description, code, price, status, stock, category } = data;
 
-            if (!title || !status || !stock || !description || !code || !price || !category) {
+            if (!title || !stock || !description || !code || !price || !category) {
                 throw new ErrorManager("Faltan datos obligatorios", 400);
             }
 
@@ -57,7 +55,7 @@ export default class ProductManager{
                 description,
                 code,
                 price: Number(price),
-                status: convertToBool(status),
+                status: convertToBool(status) || "of",
                 stock: Number(stock),
                 category,
                 thumbnail: file?.filename ?? "image-not-found.jpg",

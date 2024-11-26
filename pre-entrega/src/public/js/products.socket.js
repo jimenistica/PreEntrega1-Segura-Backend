@@ -21,24 +21,46 @@ socket.on("products-list", (data)=>{
 
 });
 
-productsForm.addEventListener("submit", (event)=>{
+// productsForm.addEventListener("submit", (event)=>{
+//     event.preventDefault();
+//     const form = event.target;
+//     const formdata = new FormData(form);
+
+//     errorMessage.innerText="";
+//     form.reset();
+
+//     socket.emit("insert-product", {
+//         title: formdata.get("title"),
+//         category: formdata.get("category"),
+//         description: formdata.get("description"),
+//         status: formdata.get("status") || "of",
+//         code: formdata.get("code"),
+//         price: formdata.get("price"),
+//         stock: formdata.get("stock"),
+//         thumbnail: formdata.get("thumbnail"),
+//     });
+// });
+
+productsForm.addEventListener("submit", async(event)=>{
     event.preventDefault();
     const form = event.target;
     const formdata = new FormData(form);
 
-    errorMessage.innerText="";
-    form.reset();
-
-    socket.emit("insert-product", {
-        title: formdata.get("title"),
-        category: formdata.get("category"),
-        description: formdata.get("description"),
-        status: formdata.get("status") || "of",
-        code: formdata.get("code"),
-        price: formdata.get("price"),
-        stock: formdata.get("stock"),
-        thumbnail: formdata.get("thumbnail"),
-    });
+    try {
+        const response = await fetch("/api/products", {
+            method: "POST",
+            body: formdata,
+        });
+        if (!response.ok) {
+            const error = await response.json();
+            console.log(`Error: ${error.message}`);
+            return;
+        }
+        console.log("Producto agregado con éxito.");
+        productsForm.reset();
+    } catch (error) {
+        console.error("Error al enviar el formulario:", error);
+    }
 });
 
 btnDeleteProduct.addEventListener("click", ()=>{

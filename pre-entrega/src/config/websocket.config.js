@@ -12,15 +12,15 @@ export const config = (httpServer) => {
     socketServer.on("connection", async (socket) => {
         socketServer.emit("products-list", { products: await productManager.getAll() });
 
-        socket.on("insert-product", async (data, file)=>{
-            try {
-                await productManager.insertOne(data, file);
+        // socket.on("insert-product", async (data, file)=>{
+        //     try {
+        //         await productManager.insertOne(data, file);
 
-                socketServer.emit("products-list", { products: await productManager.getAll() });
-            } catch (error) {
-                socketServer.emit("error-message", { message: error.message });
-            }
-        });
+        //         socketServer.emit("products-list", { products: await productManager.getAll() });
+        //     } catch (error) {
+        //         socketServer.emit("error-message", { message: error.message });
+        //     }
+        // });
 
         socket.on("delete-product", async (data)=>{
             try {
