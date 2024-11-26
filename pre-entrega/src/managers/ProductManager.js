@@ -43,14 +43,12 @@ export default class ProductManager{
 
     async insertOne(data, file){
         try {
+            console.log("File recibido:", file);
+            console.log("Data recibida:", data);
             const { title, description, code, price, status, stock, category } = data;
 
             if (!title || !status || !stock || !description || !code || !price || !category) {
                 throw new ErrorManager("Faltan datos obligatorios", 400);
-            }
-
-            if (!file?.filename) {
-                throw new ErrorManager("Falta el archivo de la imagen", 400);
             }
 
             const product={
@@ -62,7 +60,7 @@ export default class ProductManager{
                 status: convertToBool(status),
                 stock: Number(stock),
                 category,
-                thumbnail: file?.filename,
+                thumbnail: file?.filename ?? "image-not-found.jpg",
             };
 
             this.#products.push(product);
@@ -112,7 +110,7 @@ export default class ProductManager{
         try {
             const productFound = await this.$findOneById(id);
 
-            if (productFound.thumbnail) {
+            if (productFound.thumbnail && productFound.thumbnail !== "image-not-found.jpg") {
                 await deleteFile(paths.images, productFound.thumbnail);
             }
 

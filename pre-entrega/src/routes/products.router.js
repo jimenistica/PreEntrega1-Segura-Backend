@@ -1,4 +1,5 @@
 import { Router } from "express";
+
 import ProductManager from "../managers/ProductManager.js";
 import uploader from "../utils/uploader.js";
 
@@ -26,6 +27,8 @@ router.get("/:id", async (req, res)=>{
 
 router.post("/", uploader.single("thumbnail"), async (req, res)=>{
     try {
+        console.log("File recibido:", req.file);
+        console.log("Body recibido:", req.body);
         const product= await productManager.insertOne(req.body, req.file);
         res.status(201).json({ status: "succes", payload: product });
     } catch (error) {

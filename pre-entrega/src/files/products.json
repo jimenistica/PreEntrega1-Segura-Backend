@@ -1,26 +1,138 @@
 [
 	{
 		"id": 1,
-		"title": "prueba",
-		"description": "newdesc",
-		"code": "code44",
-		"price": 45,
+		"title": "Termo Stanley",
+		"description": "Termo stanley 1,2L varios colores + mate de regalo",
+		"code": "code01",
+		"price": 60000,
 		"status": true,
-		"stock": 50,
-		"category": "12d"
+		"stock": 10,
+		"category": "termos",
+		"thumbnail": "set-stanley-2.webp"
 	},
 	{
 		"id": 2,
-		"title": "prueba2",
-		"description": "desc2",
-		"code": "code22",
-		"price": 42,
+		"title": "Set latas stanley",
+		"description": "Set yerbera y azucarera. Varios colores",
+		"code": "code02",
+		"price": 80000,
 		"status": true,
 		"stock": 5,
-		"category": "12d"
+		"category": "mate",
+		"thumbnail": "set-latas-stanley-2.webp"
+	},
+	{
+		"id": 3,
+		"title": "Termo con sensor",
+		"description": "Termo con sensor 500ml. Varios colores",
+		"code": "code03",
+		"price": 10000,
+		"status": true,
+		"stock": 15,
+		"category": "termos",
+		"thumbnail": "termo-sensor-1.webp"
 	},
 	{
 		"id": 4,
+		"title": "Set latas matero",
+		"description": "Set yerbera y azucarera. Varios colores",
+		"code": "code04",
+		"price": 80000,
+		"status": true,
+		"stock": 5,
+		"category": "mate",
+		"thumbnail": "set-latas-1.webp"
+	},
+	{
+		"id": 5,
+		"title": "Botellas set x3",
+		"description": "Set 3 botellas plásticas. Varios colores",
+		"code": "code05",
+		"price": 5000,
+		"status": true,
+		"stock": 18,
+		"category": "botellas",
+		"thumbnail": "set-botellas-3.webp"
+	},
+	{
+		"id": 6,
+		"title": "Termo set 3 tazas",
+		"description": "Termo 500ml con 3 tazas. Varios colores",
+		"code": "code06",
+		"price": 20000,
+		"status": true,
+		"stock": 8,
+		"category": "termos",
+		"thumbnail": "termo-3tazas-2.webp"
+	},
+	{
+		"id": 7,
+		"title": "Pava eléctrica",
+		"description": "Pava eléctrica- Hervidora 2L. De acero inoxidable",
+		"code": "code07",
+		"price": 30000,
+		"status": true,
+		"stock": 6,
+		"category": "electro",
+		"thumbnail": "pava-2.webp"
+	},
+	{
+		"id": 8,
+		"title": "Patillera",
+		"description": "Patillera eléctrica. Varios colores",
+		"code": "code08",
+		"price": 15000,
+		"status": true,
+		"stock": 12,
+		"category": "electro",
+		"thumbnail": "patillera-1.webp"
+	},
+	{
+		"id": 9,
+		"title": "Batidora",
+		"description": "Batidora eléctrica. Varios colores",
+		"code": "code09",
+		"price": 20000,
+		"status": true,
+		"stock": 4,
+		"category": "electro",
+		"thumbnail": "batidora-2.webp"
+	},
+	{
+		"id": 10,
+		"title": "Botella animada",
+		"description": "Botella 500mL. Con correa. Varios personajes",
+		"code": "code09",
+		"price": 40000,
+		"status": true,
+		"stock": 10,
+		"category": "botellas",
+		"thumbnail": "botella-animada.webp"
+	},
+	{
+		"id": 11,
+		"title": "4",
+		"description": "4",
+		"code": "4",
+		"price": 4,
+		"status": false,
+		"stock": 4,
+		"category": "4",
+		"thumbnail": "image-not-found.jpg"
+	},
+	{
+		"id": 12,
+		"title": "5",
+		"description": "5",
+		"code": "5",
+		"price": 5,
+		"status": false,
+		"stock": 5,
+		"category": "5",
+		"thumbnail": "image-not-found.jpg"
+	},
+	{
+		"id": 13,
 		"title": "prueba6",
 		"description": "desc6",
 		"code": "code22",
@@ -28,6 +140,61 @@
 		"status": true,
 		"stock": 56,
 		"category": "12d",
-		"thumbnail": "file_6092_1111242024_023434.png"
+		"thumbnail": "file_8782_2611242024_100538.png"
+	},
+	{
+		"id": 14,
+		"title": "6",
+		"description": "6",
+		"code": "6",
+		"price": 6,
+		"status": false,
+		"stock": 6,
+		"category": "6",
+		"thumbnail": "image-not-found.jpg"
+	},
+	{
+		"id": 15,
+		"title": "7",
+		"description": "7",
+		"code": "7",
+		"price": 7,
+		"status": false,
+		"stock": 7,
+		"category": "7",
+		"thumbnail": "image-not-found.jpg"
+	},
+	{
+		"id": 16,
+		"title": "4",
+		"description": "4",
+		"code": "4",
+		"price": 4,
+		"status": false,
+		"stock": 4,
+		"category": "4",
+		"thumbnail": "image-not-found.jpg"
+	},
+	{
+		"id": 17,
+		"title": "8",
+		"description": "8",
+		"code": "8",
+		"price": 8,
+		"status": false,
+		"stock": 8,
+		"category": "8",
+		"thumbnail": "image-not-found.jpg"
+	},
+	{
+		"id": 18,
+		"title": "e",
+		"description": "e",
+		"code": "e",
+		"price": 2,
+		"status": false,
+		"stock": 2,
+		"category": "e",
+		"thumbnail": "image-not-found.jpg"
 	}
 ]
